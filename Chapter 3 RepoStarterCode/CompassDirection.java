@@ -9,7 +9,7 @@ public class CompassDirection
    {
       Scanner in = new Scanner(System.in);
       System.out.print("Enter the direction the compass is pointing " +
-         + " (in degrees from North (0..360): ");
+          " (in degrees from North (0..360): ");
       double degrees = in.nextDouble();
 
       System.out.print(degrees + " Degrees is ");
