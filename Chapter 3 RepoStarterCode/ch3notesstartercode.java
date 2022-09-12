@@ -17,8 +17,25 @@ public class ch3notesstartercode
 public static void main (String [] args)
 {
 
-        Scanner Keyboard = new Scanner(System.in);
-/**/
+        Scanner keyboard = new Scanner(System.in);
+        int num;
+        
+        System.out.println("Enter a number");
+        num = keyboard.nextInt();
+        
+        if (num > 0)
+        {
+            if (num < 13) // this must resolve to a boolean
+                    System.out.println("You go to JRH");
+                else if(num < 20)
+                    System.out.println("You go to HS");
+                else if (num < 55)
+                    System.out.println
+                    ("You are younger and most likely better looking than Mr. Hayes");
+                    System.out.println("Welcome to the World");
+        }
+    
+/*
     String word1 = "apple";
     String word2 = "cat";
     String word3 = "dog";
