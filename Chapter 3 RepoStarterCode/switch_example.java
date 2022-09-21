@@ -17,19 +17,19 @@ public class switch_example
             choice = Keyboard.next().charAt(0);
 
             
-            
+            // switch works with a char, int, or sting
             switch (choice)
             {
-
+                case 'F':
                 case 'f':
                     System.out.print(".99");
-
-
                     break;
                 case 'c':
                     System.out.print("1.50");
+                    break;
                 case 's':
                     System.out.print(".79");
+                    break;
                 default:
                     System.out.print("Incorrect Data");
 
