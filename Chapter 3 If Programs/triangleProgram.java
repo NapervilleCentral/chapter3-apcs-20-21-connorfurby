@@ -31,6 +31,17 @@ public class triangleProgram
             else
                 System.out.print("This is a scalene triangle");
         }
+        
+        if (choice.compareTo("") == 0)
+        {
+            System.out.print("Input angle measures with a space following each one: ");
+            double angle1, angle2, angle3;
+            angle1 = keyboard.nextDouble();
+            angle2 = keyboard.nextDouble();
+            angle3 = keyboard.nextDouble();
             
-    }
+        }
+        
+        else
+            System.out.print("You entered an invalid choice");
 }
