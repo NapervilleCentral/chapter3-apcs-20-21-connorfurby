@@ -16,7 +16,9 @@ public class gradesProgram
         String letgrade = new String(keyboard.nextLine());
         char letter, extra;
         double numgrade = 0, valid = 1;
+        //seperates input from letter and extra + or - charachter
         letter = letgrade.charAt(0);
+        //switch statement checks for the value of just the letter first
         switch(letter)
         {
             case 'A':
@@ -36,11 +38,13 @@ public class gradesProgram
                 break;
             default:
                 System.out.print("Not a Valid Input");
+                //makes the next part not run (short circuits program)
                 valid = 0;
         }
-            
+        //makes sure that there is a plus or minus in the grade
         if (letgrade.length() == 2 && valid != 0)
         {
+            //gets just the + or - part of grade
             extra = letgrade.charAt(1);
             switch(extra)
             {
@@ -54,10 +58,12 @@ public class gradesProgram
                     break;
                 default:
                     System.out.print("Not a Valid Input");
+                    //short circuits if invalid
                     valid = 0;
             }
         }
         if (valid == 1)
+        //prints the total grade value 
             System.out.print(numgrade + " is your numeric grade");
     }
 }
