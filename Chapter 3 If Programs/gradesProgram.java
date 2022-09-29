@@ -51,10 +51,20 @@ public class gradesProgram
                 case '+':
                     if (letter != 'A' && letter != 'F')
                         numgrade += 0.03;
+                    else if (letter == 'F')
+                    {
+                        valid = 0;
+                        System.out.print("Not a Valid Input");
+                    }
                     break;
                 case '-':
                     if (letter != 'F')
                         numgrade -= 0.03;
+                    else
+                    {
+                        valid = 0;
+                        System.out.print("Not a Valid Input");
+                    }
                     break;
                 default:
                     System.out.print("Not a Valid Input");
