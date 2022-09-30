@@ -2,7 +2,7 @@
 * Connor Furby
 * 9/29/2022
 * Planet Program
-* Tests if triangle is scalene, right, isosceles, or equilateral, given angles or sides
+* User inputs their weight on Earth and their weight on other planets are returned
 */
 
 import java.util.Scanner;
@@ -14,6 +14,8 @@ public class planetProgram
         char choice;
         double weight;
         Scanner keyboard = new Scanner(System.in);
+        
+        //prints menu of planet options
         System.out.println("-----------------");
         System.out.println("Moon:-------- 'L'");
         System.out.println("Mercury:----- 'M'");
@@ -26,54 +28,71 @@ public class planetProgram
         System.out.println("Neptune:----- 'N'");
         System.out.println("Pluto:------- 'D'");
         System.out.println("-----------------");
+        
         System.out.print("Pick an option from the menu to test weight using the letter on the right: ");
         String strchoice = new String(keyboard.nextLine());
+        //converts string to char
         choice = strchoice.charAt(0);
+        
+        //gets inputs of weight and units
         System.out.print("What unit of weight do you want to use?: ");
         String unit = new String(keyboard.nextLine());
         System.out.print("How much do you weigh?: ");
         weight = keyboard.nextDouble();
+        
+        //switch statement gets planet name and updated weight
+        String planet = new String("");
+        int valid = 1;
         switch(choice)
         {
             case 'L':
+                planet = "The Moon";
                 weight = weight * 0.167;
-                System.out.print("You weigh" + weight + " " + unit + " on the Lunar surface.");
                 break;
             case 'M':
+                planet = "Mercury";
                 weight = weight * 0.38;
-                System.out.print("You weigh" + weight + " " + unit + " on Mercury.");
                 break;
             case 'V':
+                planet = "Venus";
                 weight = weight * 0.91;
-                System.out.print("You weigh " + weight + " " + unit + " on Venus.");
                 break;
             case 'E':
-                System.out.print("You weigh " + weight + " " + unit + " on Earth. I thought we already established that!");
+                planet = "Earth";
                 break;
             case 'R':
+                planet = "Mars";
                 weight = weight * 0.38;
-                System.out.print("You weigh " + weight + " " + unit + " on The Red Planet.");
                 break;
             case 'J':
+                planet = "Jupiter";
                 weight = weight * 2.34;
-                System.out.print("You weigh " + weight + " " + unit + " on Jupiter.");
                 break;
             case 'S':
+                planet = "Saturn";
                 weight = weight * 1.06;
-                System.out.print("You weigh " + weight + " " +unit + " on Saturn.");
                 break;
             case 'U':
+                planet = "Uranus";
                 weight = weight * 0.92;
-                System.out.print("You weigh " + weight + " " + unit + " on Uranus.");
                 break;
             case 'N':
+                planet = "Neptune";
                 weight = weight * 1.19;
-                System.out.print("You weigh " + weight + " " + unit + " on Neptune.");
                 break;
             case 'D':
+                planet = "Pluto";
                 weight = weight * 0.06;
-                System.out.print("You weigh " + weight + " " + unit + " on the DWARF planet Pluto.");
                 break;
+            default:
+                System.out.print("That's not a valid planet!");
+                //wont print next part if valid = 0
+                valid = 0;
         }
+        
+        //prints weight on planet
+        if (valid == 1)
+            System.out.print("You weigh " + weight + " " + unit + " on " + planet + "!");
+        
     }
 }

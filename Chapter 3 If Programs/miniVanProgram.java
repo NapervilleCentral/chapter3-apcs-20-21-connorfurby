@@ -1,33 +1,18 @@
-
-/**
- * Write a description of class miniVanProgram here.
- *
- * @author (your name)
- * @version (a version number or a date)
+/*
+ * Connor Furby
+ * 9/22/2022
+ * Mini Van Program
+ * User inputs many parts of a mini van mechanism and program tells which doors open
  */
+
+import java.util.Scanner;
+
 public class miniVanProgram
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class miniVanProgram
-     */
-    public miniVanProgram()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Welcome to the Mini Van Program!");
+        
     }
 }
