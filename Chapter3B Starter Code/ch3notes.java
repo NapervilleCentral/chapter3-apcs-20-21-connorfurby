@@ -23,6 +23,7 @@ public class ch3notes
 
       public static void main (String [] args) throws IOException // required for File IO
    {
+       /*
        Scanner Keyboard = new Scanner(System.in);
        DecimalFormat fmt = new DecimalFormat ("0.###");
        Integer two = 2;
@@ -44,7 +45,7 @@ public class ch3notes
            total += num;
        }
        System.out.println(total);
-
+    */
     /*
         System.out.println("You scedule is:");
         // new for loop to use with iterators
@@ -117,7 +118,7 @@ public class ch3notes
 
     }
 
-
+*/
 
 
 
@@ -150,24 +151,22 @@ public class ch3notes
 
 
     }//end of while
-
+*/
 
 //_______________________basic for and scope of i________________________
-/*
+
         //ini
         //middle
         //body
         //last
         // ini          test     inc
-    for(int i = 0 ; i < 20 ; i++ )
+    int i = 0, j = 10;
+    for(;i < j;)
     {
-        System.out.print("Hi" + i + "\n");
+        System.out.print("Hi " + ++i + ", " +  j-- + "\n");
     }
 
-    //System.out.print("After the Loop" + i + "\n");
-
-/*
-
+    System.out.print("After the Loop: " + i + "\n");
 
 //--- While loop and sentinel value
 

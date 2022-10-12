@@ -38,7 +38,7 @@ public class ch3notesper5
                           "Thomas", "Charlie",
                           "heinz doofenshmirtz", "Michael",
                           "NoOne", "Bueller","Justin","David"};
-    /*
+        /*
         System.out.println("You scedule is:");
         // new for loop to use with iterators
         //foreach loop
@@ -52,7 +52,7 @@ public class ch3notesper5
 
 
 
-/*    int wordCount = 0, characterCount = 0;
+        /*int wordCount = 0, characterCount = 0;
              String line, word;
              StringTokenizer tokenizer;
 
@@ -70,29 +70,29 @@ public class ch3notesper5
 
 
 
-/* WHAT WILL OUTPUT?
-    int k =0, j=0;
-
-    System.out.println("k \tj");
-
-    for(j=0; j<20; j+=k)
-    {
-        k++;
-        System.out.println(k + "\t" + j);
-    }
-
-    System.out.println("After the loop \n k= " +k +"\tj= " +j);
-
-
-/**/
-//"C:\Users\khayes\Desktop\Classrooms\APCS 2021\chapter3-apcs-20-21-kevinthayes\Chapter 3 RepoStarterCode\speeches"
-    // Scanner file i/o defaults at the space
-    //relative path - MUST BE IN THE SAME FOLDER AS THIS FILE
+        /* WHAT WILL OUTPUT?
+            int k =0, j=0;
+        
+            System.out.println("k \tj");
+        
+            for(j=0; j<20; j+=k)
+            {
+                k++;
+                System.out.println(k + "\t" + j);
+            }
+        
+            System.out.println("After the loop \n k= " +k +"\tj= " +j);
+        
+        
+        /**/
+        //"C:\Users\khayes\Desktop\Classrooms\APCS 2021\chapter3-apcs-20-21-kevinthayes\Chapter 3 RepoStarterCode\speeches"
+            // Scanner file i/o defaults at the space
+            //relative path - MUST BE IN THE SAME FOLDER AS THIS FILE
     Scanner scanFile = new Scanner(new File("speeches\\people.txt"));
     Scanner scanFile2 = new Scanner(new File("data/Debate12016.txt"));
     /**/
     String name, address, phone;
-/*
+    /*
     while(scanFile.hasNext())
     {
         name = scanFile.next();// up to the space, nextLine() reads until the \n

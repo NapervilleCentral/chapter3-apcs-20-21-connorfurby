@@ -1,10 +1,13 @@
+package e02;
+
 import java.util.Scanner;
 
 public class SumOfOddNumbers
 {
    public static void main(String[] args)
    {
-      Scanner in = new Scanner(System.in);
+    double sum = 0;
+       Scanner in = new Scanner(System.in);
       // Get the inputs
 
       // The sum of odd numbers between a and b
