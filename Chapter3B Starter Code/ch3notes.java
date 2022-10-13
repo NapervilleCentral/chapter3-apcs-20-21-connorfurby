@@ -19,22 +19,37 @@ public class ch3notes
     Integer one = 1;
     enum Classes  {CalculusAB, English, SpanishIII, Gym, Lunch, APCS, APush, Photo}
     enum Grades {A,B,C,D,F}
-    enum Week {Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday}
+    enum Week {Monday,Tuesday,Wednesday,Thursday,Friday}
 
       public static void main (String [] args) throws IOException // required for File IO
    {
-       /*
+       
        Scanner Keyboard = new Scanner(System.in);
        DecimalFormat fmt = new DecimalFormat ("0.###");
        Integer two = 2;
 
        Grades mygrade = Grades.F;
        Grades yourgrade = Grades.A;
+       System.out.println(mygrade);
        System.out.println(yourgrade.compareTo( mygrade) );
        String[] people = {"Deepa", "Trevor", "Murugan", "Emy",
                           "Thomas", "Charlie",
                           "heinz doofenshmirtz", "Michael",
                           "NoOne", "Bueller","Justin","David"};
+                          
+        /**/
+        String number = "y";
+        int num, total = 0, sum = 0;
+        System.out.print("Enter a number");
+        number = Keyboard.next();//"5", "q"
+        
+        /**/
+        
+        while (!number.equals("q"))
+        {
+            num = integer.parseInt(number); //convert String to int; Double.parseDouble()
+            num += num;
+        }
        String number;
        int num,total = 0;
        for(int i = 0; i< 5; i++)
@@ -45,8 +60,8 @@ public class ch3notes
            total += num;
        }
        System.out.println(total);
-    */
-    /*
+       
+       
         System.out.println("You scedule is:");
         // new for loop to use with iterators
         //foreach loop
@@ -97,6 +112,16 @@ public class ch3notes
     Scanner scanFile = new Scanner(new File("speeches\\people.txt"));
     Scanner scanFile2 = new Scanner(new File("data/Debate12016.txt"));
     String data = scanFile.nextLine();
+    String name, address, phone;
+    
+    while(scanFile.hasNext())
+    {
+        name = scanFile.next();
+        address = scanFile.next();
+        phone = scanFile.next();
+        
+        System.out.println(name + "---" + phone);
+    }
     /*
     String name, address, phone;
 
