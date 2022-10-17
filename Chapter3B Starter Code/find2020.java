@@ -34,14 +34,21 @@ public class find2020
    {
        Scanner keyboard = new Scanner(System.in);
        Scanner scanFile = new Scanner(new File("mistery2020.txt"));
-        
-    
+       int total = 0;    
        while(scanFile.hasNext())
        {
-           int number = scanFile.nextInt();
-           System.out.println(number);
+           int number1 = scanFile.nextInt();
+           Scanner scanFile2 = new Scanner(new File("mistery2020.txt"));
+           while (scanFile2.hasNext())
+           {
+               int number2 = scanFile2.nextInt();
+               if ((number1 + number2 == 2020) && (number1 != number2))
+                   total = (number1 * number2);
+        
+           }
            //String junk = keyboard.nextLine();
            
        }
+       System.out.print(total);
     }//end of main
 }//end of class

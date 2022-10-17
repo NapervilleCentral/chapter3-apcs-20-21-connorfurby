@@ -27,7 +27,7 @@ public class ch3notes
        Scanner Keyboard = new Scanner(System.in);
        DecimalFormat fmt = new DecimalFormat ("0.###");
        Integer two = 2;
-
+    /*
        Grades mygrade = Grades.F;
        Grades yourgrade = Grades.A;
        System.out.println(mygrade);
@@ -37,13 +37,14 @@ public class ch3notes
                           "heinz doofenshmirtz", "Michael",
                           "NoOne", "Bueller","Justin","David"};
                           
-        /**/
+        */
+       /*
         String number = "y";
         int num, total = 0, sum = 0;
         System.out.print("Enter a number");
         number = Keyboard.next();//"5", "q"
         
-        /**/
+        
         
         while (!number.equals("q"))
         {
@@ -74,8 +75,9 @@ public class ch3notes
 
 
 
-
-/*    int wordCount = 0, characterCount = 0;
+*/
+/*
+  int wordCount = 0, characterCount = 0;
              String line, word;
              StringTokenizer tokenizer;
 
@@ -93,7 +95,7 @@ public class ch3notes
 
 
 
-/* WHAT WILL OUTPUT?
+ WHAT WILL OUTPUT?
     int k =0, j=0;
 
     System.out.println("k \tj");
@@ -107,7 +109,7 @@ public class ch3notes
     System.out.println("After the loop \n k= " +k +"\tj= " +j);
 
 
-/**/
+
     // Scanner file i/o defaults at the space
     Scanner scanFile = new Scanner(new File("speeches\\people.txt"));
     Scanner scanFile2 = new Scanner(new File("data/Debate12016.txt"));
@@ -122,7 +124,7 @@ public class ch3notes
         
         System.out.println(name + "---" + phone);
     }
-    /*
+
     String name, address, phone;
 
     while(scanFile.hasNext())
@@ -134,15 +136,18 @@ public class ch3notes
         System.out.println(name + "---"+ phone);
 
     }
-    /*
+*/
+/*
     String word;
+    Scanner scanFile2 = new Scanner(new File("data/Debate12016.txt"));
+    int total = 0;
      while(scanFile2.hasNext())
     {
         word = scanFile2.next();
-        System.out.println(word);
-
+        if (word.equalsIgnoreCase("Job") || word.equalsIgnoreCase("Jobs") || word.equalsIgnoreCase("Jobs.") || word.equalsIgnoreCase("Job.") || word.equalsIgnoreCase("Jobs,") || word.equalsIgnoreCase("Job,"));
+            total ++;
     }
-
+    System.out.println("Jobs was said " + total);
 */
 
 
@@ -185,6 +190,7 @@ public class ch3notes
         //body
         //last
         // ini          test     inc
+        /*
     int i = 0, j = 10;
     for(;i < j;)
     {
@@ -192,7 +198,7 @@ public class ch3notes
     }
 
     System.out.print("After the Loop: " + i + "\n");
-
+*/
 //--- While loop and sentinel value
 
 /*
