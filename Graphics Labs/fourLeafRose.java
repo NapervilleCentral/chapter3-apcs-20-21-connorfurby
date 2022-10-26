@@ -1,33 +1,29 @@
 
 /**
- * Write a description of class fourLeafRose here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Connor Furby
+ * 10/26/22
+ * Four Leaf Rose Program
  */
+
+import TurtleGraphics.*;
+import java.awt.*;
+
 public class fourLeafRose
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class fourLeafRose
-     */
-    public fourLeafRose()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        int theta = 0;
+        double x = 0, y = 0, radius = 0;
+        StandardPen pen = new StandardPen();
+        Color newColor = new Color(127, 255, 212);
+        pen.setColor(newColor);
+        for (int i = 1; i <= 100; i++)
+        {
+            theta += ((2 * Math.PI) / 100);
+            radius = Math.cos(2 * theta);
+            x = radius * Math.cos(theta) * 100;
+            y = radius * Math.sin(theta) * 100;
+            pen.move(x,y);
+        }
     }
 }
