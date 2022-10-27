@@ -1,33 +1,47 @@
 
 /**
- * Write a description of class randomWalk here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Connor Furby
+ * 10/27/22
+ * Random Walk Lab
  */
+import TurtleGraphics.*;
+import java.awt.*;
+import java.util.*;
+
 public class randomWalk
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class randomWalk
-     */
-    public randomWalk()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        double x = 0, y = 0;
+        int randdir = 1;
+        StandardPen pen = new StandardPen();
+        Color newColor = new Color(127, 255, 212);
+        pen.setColor(newColor);
+        Random rand = new Random();
+        for (int i = 1; i <= 100; i++)
+        {
+            randdir = rand.nextInt(4) + 1;
+            if (randdir == 1)
+            {
+                x = x;
+                y = y + 10;
+            }
+            if (randdir == 2)
+            {
+                x = x + 10;
+                y = y;
+            }
+            if (randdir == 3)
+            {
+                x = x;
+                y = y - 10;
+            }
+            if (randdir == 4)
+            {
+                x = x - 10;
+                y = y;
+            }
+            pen.move(x * 5, y * 5);
+        }
     }
 }

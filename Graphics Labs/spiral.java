@@ -1,33 +1,46 @@
 
 /**
- * Write a description of class spiral here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Connor Furby
+ * 10/27/22
+ * Spiral Lab
  */
+import TurtleGraphics.*;
+import java.awt.*;
+
 public class spiral
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class spiral
-     */
-    public spiral()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        double x = 0, y = 0;
+        StandardPen pen = new StandardPen();
+        Color newColor = new Color(127, 255, 212);
+        pen.setColor(newColor);
+        for (int i = 1, t = 1; i <= 100; i++, t++)
+        {
+            if (t > 4)
+                t = 1;
+            if (t == 1)
+            {
+                x = x + i;
+                y = y;
+            }
+            else if (t == 2)
+            {
+                x = x;
+                y = y - i;
+            }
+            else if (t == 3)
+            {
+                x = x - i;
+                y = y;
+            }
+            else if (t == 4)
+            {
+                x = x;
+                y = y + i;
+            }
+            
+            pen.move(x * 5, y * 5);
+        }
     }
 }
