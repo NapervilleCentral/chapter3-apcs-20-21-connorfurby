@@ -17,12 +17,12 @@ public class speechesFileIO
     {
         int currWordLen, wordcnt = 1, peoplecnt = 0, governmentcnt = 0, unitedcnt = 0, ourcnt = 0;
         double avgWordLen = 0;
-        //Scanner scanFile = new Scanner(new File("obamatakebackamerica.txt"));
+        Scanner scanFile = new Scanner(new File("obamatakebackamerica.txt"));
         //Scanner scanFile = new Scanner(new File("Jadams inaugural speech.txt"));
         //Scanner scanFile = new Scanner(new File("Rutherford B Hayes Inaugural.txt"));
         //Scanner scanFile = new Scanner(new File("jfk.txt"));
         //Scanner scanFile = new Scanner(new File("taft.txt"));
-        Scanner scanFile = new Scanner(new File("tjefferson.txt"));
+        //Scanner scanFile = new Scanner(new File("tjefferson.txt"));
         String name = new String(scanFile.nextLine());
         String date = new String(scanFile.nextLine());
         String title = new String(scanFile.nextLine());
@@ -63,5 +63,7 @@ public class speechesFileIO
         System.out.println("Percentage of words that were 'United': " + df.format(unitedpercent));
         System.out.println("Times 'Our' Was Said: " + ourcnt);
         System.out.println("Percentage of words that were 'Our': " + df.format(ourcnt / wordcnt));
+        // Data:
+        // https://docs.google.com/spreadsheets/d/12nT6k18FgxqJUo6ZH4Y_bcvgdZ7cn4YXWgTMNxbc4uo/edit?usp=sharing
     }
 }
